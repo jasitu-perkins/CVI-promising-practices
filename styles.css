@@ -6,6 +6,11 @@ body {
     color: #333;
     
 }
+
+h1 {
+    text-align: center;
+}
+
 form {
     max-width: 800px;
     margin: 20px auto;
