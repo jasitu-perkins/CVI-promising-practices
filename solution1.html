@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taxonomy Converter</title>
+    <style>
+        body {font-family: Arial, sans-serif;}
+        form {margin-bottom: 20px;}
+        .filter {margin-bottom: 10px;}
+        .filter h3 {margin: 0;}
+        .filter label {display: block;}
+        .subitem {margin-left: 20px;}
+        textarea {width: 100%; height: 100px; margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+    <form id="taxonomy-form">
+        <div class="filter">
+            <h3>Filter 1: Student Profiles</h3>
+            <button type="button" onclick="selectAll('filter1')">Select All</button>
+            <div>
+                <label><input type="checkbox" name="filter1" value="Visual Skills"> 1 Visual Skills</label>
+                <div class="subitem">
+                    <label><input type="checkbox" name="filter1" value="No or inconsistent visual attention"> 1a No or inconsistent visual attention</label>
+                    <div class="subitem">
+                        <label><input type="checkbox" name="filter1" value="With no visual recognition"> 1b-a With no visual recognition</label>
+                    </div>
+                </div>
+                <!-- Add other terms similarly -->
+            </div>
+        </div>
+
+        <!-- Add other filters similarly -->
+
+        <button type="button" id="generate-btn">Generate</button>
+    </form>
+
+    <textarea id="output1"></textarea>
+    <textarea id="output2"></textarea>
+    <textarea id="output3"></textarea>
+
+    <script>
+    document.getElementById('generate-btn').addEventListener('click', function() {
+        // Define your taxonomy terms and their hierarchy
+        var filters = {
+            'filter1': [
+                {name: '1 Visual Skills', children: [
+                    {name: '1a No or inconsistent visual attention', children: [
+                        {name: '1b-a With no visual recognition'}
+                        // Add more children here...
+                    ]}
+                    // Add more children here...
+                ]}
+                // Add more top-level terms here...
+            ],
+            // Define filter2 and filter3 similarly...
+        };
+
+        // Function to generate the output for a term and its children
+        function generateOutput(term, prefix) {
+            var output = prefix ? prefix + '>' + term.name : term.name;
+            if (term.children) {
+                term.children.forEach(function(child) {
+                    output += '|' + generateOutput(child, output);
+                });
+            }
+            return output;
+        }
+
+        // Generate the output for each filter
+        Object.keys(filters).forEach(function(filter) {
+            var output = filters[filter].map(function(term) {
+                return generateOutput(term, '');
+            }).join('|');
+            document.getElementById('output-' + filter).value = output;
+        });
+    });
+
+    // Function to select all checkboxes within a filter
+    function selectAll(filter) {
+        var checkboxes = document.querySelectorAll('input[name="' + filter + '"]');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = true;
+        });
+    }
+    </script>
+</body>
+</html>
