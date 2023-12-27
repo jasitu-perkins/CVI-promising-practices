@@ -140,13 +140,22 @@
     // Generate the output for each filter
     Object.keys(filters).forEach(function(filter) {
         var output = '';
+        var debugOutput = '';
         document.querySelectorAll('input[name="' + filter + '"]:checked').forEach(function(checkbox) {
             var result = findTerm(filters[filter], checkbox.value, '');
             if (result && result.term) {
                 output += (output ? '|' : '') + generateOutput(result.term, result.prefix);
+                // Find the label associated with the checkbox
+                var label = checkbox.parentElement.innerText;
+                // Remove any leading or trailing whitespace
+                label = label.trim();
+                // Split the label on the period and take the first part
+                label = label.split('.')[0];
+                debugOutput += (debugOutput ? ', ' : '') + label;
             }
         });
         document.getElementById('output-' + filter).value = output;
+        document.getElementById('debug-output-' + filter).value = debugOutput; // Set the debug output
     });
 });
 
@@ -162,8 +171,9 @@ document.querySelectorAll('.select-all').forEach(function(button) {
 });
 
 document.getElementById('clear-btn').addEventListener('click', function() {
-    // Clear the output for each filter
+    // Clear the output and debug output for each filter
     ['filter1', 'filter2', 'filter3'].forEach(function(filter) {
         document.getElementById('output-' + filter).value = '';
+        document.getElementById('debug-output-' + filter).value = '';
     });
 });
