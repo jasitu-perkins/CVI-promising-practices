@@ -160,3 +160,10 @@ document.querySelectorAll('.select-all').forEach(function(button) {
         });
     });
 });
+
+document.getElementById('clear-btn').addEventListener('click', function() {
+    // Clear the output for each filter
+    ['filter1', 'filter2', 'filter3'].forEach(function(filter) {
+        document.getElementById('output-' + filter).value = '';
+    });
+});
