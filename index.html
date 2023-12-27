@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CVI: Promising Practices Taxonomy Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CVI: Promising Practices Taxonomy Converter</h1>
+    <div class="container">
+    <div class="filter-container">
+    <form id="taxonomy-form">
+        <details class="filter" open>
+            <summary>Filter 1: Student Profiles</summary>
+            <ul>
+                <li>
+                    <label><input type="checkbox" name="filter1" value="Visual Skills"> 1. Visual Skills</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter1" value="No or inconsistent visual attention"> 1a. No or inconsistent visual attention</label></li>
+                        <li>
+                            <label><input type="checkbox" name="filter1" value="Limited visual attention"> 1b. Limited visual attention</label>
+                            <ul>
+                                <li><label><input type="checkbox" name="filter1" value="With no visual recognition"> 1b-a. With no visual recognition</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="With limited visual recognition"> 1b-b. With limited visual recognition</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="With variable visual recognition"> 1b-c. With variable visual recognition</label></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="filter1" value="Good visual attention"> 1c. Good visual attention</label>
+                            <ul>
+                                <li><label><input type="checkbox" name="filter1" value="With no visual recognition"> 1c-a. With no visual recognition</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="With limited visual recognition"> 1c-b. With limited visual recognition</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="With variable visual recognition"> 1c-c. With variable visual recognition</label></li>
+                            </ul>
+                        </li>
+                        <li><label><input type="checkbox" name="filter1" value="No visual recognition"> 1d. No visual recognition</label></li>
+                        <li>
+                            <label><input type="checkbox" name="filter1" value="Limited visual recognition"> 1e. Limited visual recognition</label>
+                            <ul>
+                                <li><label><input type="checkbox" name="filter1" value="Recognizes 3D only/classes of familiar items"> 1e-a. Recognizes 3D only/classes of familiar items</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="Difficulty with 2D"> 1e-b. Difficulty with 2D</label></li>
+                            </ul>
+                        </li>
+                        <li><label><input type="checkbox" name="filter1" value="Good visual recognition with familiar things"> 1f. Good visual recognition with familiar things</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter1" value="Hearing/Auditory"> 2. Hearing/Auditory</label>
+                    <ul>
+                        <li>
+                            <label><input type="checkbox" name="filter1" value="Hearing loss"> 2a. Hearing loss</label>
+                            <ul>
+                                <li><label><input type="checkbox" name="filter1" value="Some residual hearing"> 2a-a. Some residual hearing</label></li>
+                                <li><label><input type="checkbox" name="filter1" value="No residual hearing"> 2a-b. No residual hearing</label></li>
+                            </ul>
+                        </li>
+                        <li><label><input type="checkbox" name="filter1" value="Auditory processing disorder"> 2b. Auditory processing disorder</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter1" value="Communication Skills"> 3. Communication Skills</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter1" value="Verbal"> 3a. Verbal</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Uses sign language"> 3b. Uses sign language</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Uses AAC"> 3c. Uses AAC</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Uses non-traditional language abilities, etc."> 3d. Uses non-traditional language abilities, etc.</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter1" value="Motor Issues"> 4. Motor Issues</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter1" value="Lower limb(s)"> 4a. Lower limb(s)</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Upper limb(s)"> 4b. Upper limb(s)</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter1" value="Compensatory Skills Use"> 5. Compensatory Skills Use</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter1" value="All the time"> 5a. All the time</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Sometimes"> 5b. Sometimes</label></li>
+                        <li><label><input type="checkbox" name="filter1" value="Depends on the alert state"> 5c. Depends on the alert state</label></li>
+                    </ul>
+                </li>
+            </ul>
+            <button type="button" class="select-all">Select All</button>
+        </details>
+        
+        <details class="filter" open>
+            <summary>Filter 2: Intervention Area</summary>
+            <ul>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Math"> 1. Math</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Literacy/Materials"> 2. Literacy/Materials</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Communication"> 3. Communication</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="sign language"> 3a. sign language</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="assistive technology"> 3b. assistive technology</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="reliable responses"> 3c. reliable responses</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Self-Determination and Advocacy"> 4. Self-Determination and Advocacy</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="Advocacy"> 4a. Advocacy</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Problem-solving"> 4b. Problem-solving</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Goal setting"> 4c. Goal setting</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Choice making"> 4d. Choice making</label></li>
+                    </ul>
+                </li>
+                <li><label><input type="checkbox" name="filter2" value="Orientation and Mobility"> 5. Orientation and Mobility</label></li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Independent Living"> 6. Independent Living</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="Self-care"> 6a. Self-care</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Home management"> 6b. Home management</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Organization skills"> 6c. Organization skills</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Compensatory Skills"> 7. Compensatory Skills</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="Tactile"> 7a. Tactile</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Auditory cue/verbal label"> 7b. Auditory cue/verbal label</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Prediction"> 7c. Prediction</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Memory"> 7d. Memory</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Color-coding"> 7e. Color-coding</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Reliance on context"> 7f. Reliance on context</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Sound cues"> 7g. Sound cues</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Smell"> 7h. Smell</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Verbal questioning"> 7i. Verbal questioning</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Social Skills"> 8. Social Skills</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="Needs structured opportunities"> 8a. Needs structured opportunities</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Self-directed"> 8b. Self-directed</label></li>
+                    </ul>
+                </li>
+                <li><label><input type="checkbox" name="filter2" value="Recreation and Leisure"> 9. Recreation and Leisure</label></li>
+                <li>
+                    <label><input type="checkbox" name="filter2" value="Sensory Efficiency"> 10. Sensory Efficiency</label>
+                    <ul>
+                        <li><label><input type="checkbox" name="filter2" value="Visual"> 10a. Visual</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Auditory"> 10b. Auditory</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Tactile"> 10c. Tactile</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Kinesthetic"> 10d. Kinesthetic</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Gustatory"> 10e. Gustatory</label></li>
+                        <li><label><input type="checkbox" name="filter2" value="Olfactory"> 10f. Olfactory</label></li>
+                    </ul>
+                </li>
+                <li><label><input type="checkbox" name="filter2" value="Assistive Technology"> 11. Assistive Technology</label></li>
+                <li><label><input type="checkbox" name="filter2" value="Social Studies"> 12. Social Studies</label></li>
+                <li><label><input type="checkbox" name="filter2" value="Science"> 13. Science</label></li>
+                <li><label><input type="checkbox" name="filter2" value="Active Learning"> 14. Active Learning</label></li>
+                <li><label><input type="checkbox" name="filter2" value="Environment and positioning"> 15. Environment and positioning</label></li>
+                <li><label><input type="checkbox" name="filter2" value="Training and services"> 16. Training and services</label></li>
+            </ul>
+            <button type="button" class="select-all">Select All</button>
+        </details>
+        
+        <details class="filter" open>
+            <summary>Filter 3: Visual Behaviors</summary>
+            <ul>
+                <li><label><input type="checkbox" name="filter3" value="Appearance of the Eye"> 1. Appearance of the Eye</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Movement of the Eye"> 2. Movement of the Eye</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Impact of Light"> 3. Impact of Light</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Impact of Motion"> 4. Impact of Motion</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Impact of Color"> 5. Impact of Color</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Response Interval"> 6. Response Interval</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Sensory Integration While Using Vision"> 7. Sensory Integration While Using Vision</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Access to People"> 8. Access to People</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Impact of Clutter and Crowding"> 9. Impact of Clutter and Crowding</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Fields"> 10. Visual Fields</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Attention"> 11. Visual Attention</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Recognition"> 12. Visual Recognition</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Form Accessibility"> 13. Form Accessibility</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Guidance of Upper Limbs"> 14. Visual Guidance of Upper Limbs</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Guidance of Lower Limbs"> 15. Visual Guidance of Lower Limbs</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Visual Curiosity"> 16. Visual Curiosity</label></li>
+                <li><label><input type="checkbox" name="filter3" value="Compensatory Skills"> 17. Compensatory Skills</label></li>
+            </ul>
+            <button type="button" class="select-all">Select All</button>
+        </details>
+    </form>
+</div>
+
+        <div>
+            <h3>Output for Filter 1: Student Profiles</h3>
+            <textarea id="output-filter1"></textarea>
+            <h3>Output for Filter 2: Intervention Area</h3>
+            <textarea id="output-filter2"></textarea>
+            <h3>Output for Filter 3: Visual Behaviors</h3>
+            <textarea id="output-filter3"></textarea>
+            <button type="button" id="generate-btn">Generate</button>
+        </div>
+    </div>
+
+    <script src="taxonomy.js"></script>
+</body>
+</html>
